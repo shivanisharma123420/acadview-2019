@@ -1,0 +1,104 @@
+<DOCTYPE! html>
+<head>
+<style>
+  div{
+    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIMsoOc2WUwKiJfH2VlG0EV-RKkvSsfSxP11KKplrvxyYVPEPfTw");
+    background-size: cover;
+    background-position:center;
+  }
+  body{
+  background:white;
+
+  }
+  form{
+    text-align :center;
+
+
+
+  }
+  button{
+    background:pink;
+  }
+.first  {
+    border: 4px solid black;
+    height:80%;
+    width:100%;
+    border-radius:50px;
+    font-size:20px;  }
+    .head{
+      color:white;
+      background:black;
+
+    }
+</style>
+</head>
+<body>
+<form action="#" onsubmit="return validation()">
+
+  <div class="first">
+    <div class="head">
+
+    <h1> Your information</h1>
+    </div>
+
+Name : <input type="text" id="name" placeholder="Enter your name">
+<br>
+<br>
+Age  :   <input type ="number" placeholder="Enter your age">
+<br>
+<br>
+Phone :  <input type="text" placeholder="Enter your number">
+<br>
+<br>
+Email :  <input id="email" type="text" placeholder="Enter your email">
+<br>
+<br>
+Password : <input type="text" id="pass" placeholder="Enter your password">
+</select>
+<br>
+<br>
+<input type="submit">
+</div>
+</form>
+<script>
+function validation()
+{
+var name=document.getElementById('name').value;
+var email=document.getElementById('email').value;
+
+var phone=document.getElementById('phone').value;
+       var pass=document.getElementById('pass').value;
+
+
+  if(name=='')
+  {
+    window.alert("Plese fill the name");
+  }
+  else if(name.length<=2)
+  {
+    window.alert("Invalid Name");
+  }
+  else if(phone.length<10)
+          {
+            window.alert("Invalid number");
+          }
+  else if(email=='')
+  {
+    window.alert("Please fill your email")
+  }
+  else if(email.indexOf('@')<=0)
+  {
+    window.alert("*please fill the email id in proper format");
+  }
+  else if(pass==" ")
+  {
+    window.alert("please enter password");
+  }
+  else{
+    window.alert('your form was submitted');
+  }
+
+}
+</script>
+</body>
+</html>
