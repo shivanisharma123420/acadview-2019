@@ -1,4 +1,4 @@
-<DOCTYPE! html>
+<htm>
 <head>
 <style>
   div{
@@ -47,7 +47,7 @@ Name : <input type="text" id="name" placeholder="Enter your name">
 Age  :   <input type ="number" placeholder="Enter your age">
 <br>
 <br>
-Phone :  <input type="text" placeholder="Enter your number">
+Phone :  <input type="text" placeholder="Enter your number" id="phone">
 <br>
 <br>
 Email :  <input id="email" type="text" placeholder="Enter your email">
@@ -65,10 +65,8 @@ function validation()
 {
 var name=document.getElementById('name').value;
 var email=document.getElementById('email').value;
-
+var pass=document.getElementById('pass').value;
 var phone=document.getElementById('phone').value;
-       var pass=document.getElementById('pass').value;
-
 
   if(name=='')
   {
@@ -79,9 +77,9 @@ var phone=document.getElementById('phone').value;
     window.alert("Invalid Name");
   }
   else if(phone.length<10)
-          {
-            window.alert("Invalid number");
-          }
+  {
+    window.alert("Invalid number");
+  }
   else if(email=='')
   {
     window.alert("Please fill your email")
@@ -90,7 +88,7 @@ var phone=document.getElementById('phone').value;
   {
     window.alert("*please fill the email id in proper format");
   }
-  else if(pass==" ")
+  else if(pass==" S")
   {
     window.alert("please enter password");
   }
